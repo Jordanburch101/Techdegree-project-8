@@ -1,0 +1,24 @@
+// ======================================
+//  Mixins
+// ======================================
+
+
+
+// Media Queries ===============================
+
+// Media queries
+@mixin media($break) {            
+  @if $break == 'med' {
+    @media (min-width: $break-med) {
+      @content;             // Add 'else if' for more breakpoints
+    }          
+  } @else if $break == 'lrg' {
+    @media (min-width: $break-lrg) {
+      @content;             
+    }
+  } @else if $break == 'sup' {
+    @media (min-width: $break-sup) {
+      @content;             
+    }
+  }    
+}

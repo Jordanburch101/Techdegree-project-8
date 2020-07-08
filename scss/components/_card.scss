@@ -5,14 +5,16 @@
 .card {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: 1em auto;
-    border: solid 2px $color-border;
-    // box-shadow: 10px 11px 50px -12px rgba(194,194,194,1);
+    height: 150px;
+    width: 350px;
+    border: solid 1px $color-border;
+    box-shadow: 10px 11px 50px -12px rgba(194,194,194,1);
     border-radius: 5px;
     .info-container {
         padding-left: 1em;
         padding-right: 1em;
-        padding-top: 1em;
         .name {
             font-size: 1.1em;
             font-weight: bold;
@@ -22,12 +24,14 @@
         .city {
             color: $color-text-light;
             font-family: $font-secondary;
-            font-size: .9em;
+            font-size: .8em;
         }
     }
     .avatar {
         border-radius: 50%;
-        padding: 1em 1em
+        padding: 1em 1em;
+        width: 130px;
     }
 
 }
+

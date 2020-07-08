@@ -1,0 +1,22 @@
+// ======================================
+//  Search Partial
+// ======================================
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    h1 {
+        font-size: 1.6em;
+        padding: 1em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .search {
+        
+        input {
+            width: 300px;
+        }
+    }
+}

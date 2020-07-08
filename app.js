@@ -10,13 +10,11 @@ let employees = [];
 
 
 //// Fetch API ////
-
 fetch(urlAPI)
     .then(data => data.json())
     .then(data => data.results)
     .then(displayEmployees)
     .catch(err => console.log(err));
-
 
 //// Generate HTML from API ////    
 function displayEmployees(employeeData) {
@@ -40,3 +38,39 @@ function displayEmployees(employeeData) {
     });
     gridContainer.innerHTML = employeeHTML;
 }
+
+////Generate Modal ////
+function displayModal(index) {
+    let {name, dob, phone, email, location: {city, street, state,
+    postcode}, picture} = employees[index];
+
+    let date = new Date(dob.date);
+
+    const modalHTML = `
+    <img class="avatar" src="${picture.large}" alt="Picture of ${name.first}">
+        <div class="text-content">
+            <h2 class="name">${name.first} ${name.last}</h2>
+            <p class="email">${email}</p>
+            <p class="city">${city}</p>
+            <hr>
+            <p class="phone">${phone}​</p>
+            <p class="address">${street.number}, ${street.name}, ${state}, ${postcode}</p>
+            <p class="birthday">Birthday: 
+            ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+        </div>
+    `;
+    overlay.classList.remove("hidden");
+    modalContainer.innerHTML = modalHTML;
+}
+
+gridContainer.addEventListener('click', event => {
+    if(event.target !== gridContainer) {
+        const card = event.target.closest(".card");
+        const index = card.getAttribute('data-index');
+        displayModal(index);
+    }
+});
+
+ modalClose.addEventListener('click', () => {
+    overlay.classList.add("hidden");
+ });

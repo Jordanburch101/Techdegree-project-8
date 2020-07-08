@@ -1,0 +1,64 @@
+// ======================================
+//  Modal Partial
+// ======================================
+
+.hidden {
+    display: none;
+}
+
+body {
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(100, 100, 100, 0.26);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    margin: 10em auto;
+    padding-top: .5em;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px $color-border;
+    button {
+        width: 20px;
+        margin-left: auto;
+        margin-right: .5em;
+        border: none;
+        background-color: white;
+    }
+    .avatar {
+        border-radius: 50%;
+    }
+    .text-content {
+        .name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: $color-text-primary;
+        }
+        p {
+            color: $color-text-light;
+            font-family: $font-secondary;
+            font-size: 1.1em;
+        }
+        hr {
+            margin-top: 2em;
+            margin-bottom: 2em;
+            border: 0;
+            height: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+}

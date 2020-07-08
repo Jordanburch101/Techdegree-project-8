@@ -390,4 +390,63 @@ header h1 {
   padding: 1em 1em;
 }
 
+.hidden {
+  display: none;
+}
+
+body {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(100, 100, 100, 0.26);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  margin: 10em auto;
+  padding-top: 0.5em;
+  background-color: white;
+  border-radius: 10px;
+  border: solid 1px rgba(190, 190, 190, 0.685);
+}
+.modal button {
+  width: 20px;
+  margin-left: auto;
+  margin-right: 0.5em;
+  border: none;
+  background-color: white;
+}
+.modal .avatar {
+  border-radius: 50%;
+}
+.modal .text-content .name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #535353;
+}
+.modal .text-content p {
+  color: #868686;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1em;
+}
+.modal .text-content hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /*# sourceMappingURL=style.css.map */

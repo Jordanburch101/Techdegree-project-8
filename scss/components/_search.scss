@@ -13,10 +13,66 @@ header {
         text-align: center;
         text-transform: uppercase;
     }
+    .tech-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+            margin-top: 0;
+            padding-left: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        .tech li {
+            display: inline-block;
+            margin-top: 1em;
+            width: 100px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            color: $color-text-white;
+            transition: transform .2s ease-in-out;
+            box-shadow: 0px 6px 23px -2px rgba(145,145,145,1);
+            &.javascript {
+                background-color: $color-javascript;
+                a {
+                    color: $color-text-white;
+                }
+                &:hover {
+                    background-color: lighten($color-javascript, 20%);
+                }
+            }
+            &.jquery {
+                background-color: $color-jquery;
+                a {
+                    color: $color-text-white;
+                }
+                &:hover {
+                    background-color: lighten($color-jquery, 20%);
+                }
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+            
+            
+        }
+    }
+
     .search {
-        
         input {
-            width: 300px;
+            height: 40px;
+            width:  350px;
+            padding-left: .5em;
+            padding-right: .5em;
+            border-radius: 10px;
+            border: 1px solid $color-border;
+            &:focus {
+                background-color: $color-text-focus;
+                color: $color-text-white;
+                outline: none;
+            }
         }
     }
 }

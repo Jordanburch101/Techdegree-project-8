@@ -4,13 +4,23 @@
     <meta charset="utf-8">
     <title>Employee API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/light-modal.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
         <header>
-            <h1 class="title">Awesome Startup Employee Directory</h1>
+            <h1 class="title">Startup Employee Directory</h1>
+            <div class="intro-container">
+                <div class="tech-container">
+                    <p>An API driven directory built using:</p>
+                    <ul class="tech">
+                        <li class="javascript"><a href="https://www.javascript.com/" target="blank">Javascript</a></li>
+                        <li class="jquery"><a href="https://jquery.com/" target="blank">Jquery</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="search">
                 <form action="">
                     <input id="searchBox" type="text" placeholder="Search for Employees">
@@ -27,9 +37,21 @@
                 </div>
             </section> -->
         </main>
-        <section class="overlay hidden">
+        <section class="overlay">
             <div class="modal">
                 <button class="modal-close">X</button>
+                <svg class="arrow-left" width="11" height="20"> <!--Arrow-Left-->
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-6-2h24v24H-6z" opacity=".87"/>
+                      <path fill="currentColor" d="M10.62.99a1.25 1.25 0 00-1.77 0L.54 9.3a.996.996 0 000 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L3.38 10l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/>
+                    </g>
+                </svg>
+                <svg class="arrow-right" width="11" height="20"> <!--Arrow-Left-->
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-6-2h24v24H-6z" opacity=".87"/>
+                      <path fill="currentColor" d="M10.62.99a1.25 1.25 0 00-1.77 0L.54 9.3a.996.996 0 000 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L3.38 10l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/>
+                    </g>
+                </svg>
                 <div class="modal-content">
                     <!-- <img class="avatar" src="examples/test-profile.jpg" alt="test image">
                     <div class="text-content">
@@ -44,6 +66,13 @@
                 </div>
             </div>
         </section>
+
+        <footer>
+            <p>By: Jordan Burch <a 
+                href="https://github.com/Jordanburch101/Techdegree-project-8" 
+                target="blank"><img class="git" src="img/git.png" alt="Github icon"></a>
+              </p>
+        </footer>
         <script
 			  src="https://code.jquery.com/jquery-3.5.1.min.js"
 			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="

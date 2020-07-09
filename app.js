@@ -5,7 +5,10 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture,email, location, phone, dob &noinfo &nat=US`
 const searchBox = document.getElementById("searchBox");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
 let employees = [];
+let currentModal = 0;
 //////////////////////////
 
 
@@ -43,8 +46,10 @@ function displayEmployees(employeeData) {
 function displayModal(index) {
     let {name, dob, phone, email, location: {city, street, state,
     postcode}, picture} = employees[index];
-
     let date = new Date(dob.date);
+
+    currentModalString = index;
+    currentModal = parseInt(currentModalString, 10);
 
     const modalHTML = `
     <img class="avatar" src="${picture.large}" alt="Picture of ${name.first}">
@@ -60,19 +65,38 @@ function displayModal(index) {
         </div>
     `;
     overlay.classList.remove("hidden");
+    overlay.classList.add("show");
     modalContainer.innerHTML = modalHTML;
 }
+// Set display to show
+function displayShow(event) {
+    setTimeout(function(){ event.style.opacity = 1 }, 100);
+};
+// Set display to hide
+function displayHide(event) {
+    setTimeout(function(){ event.style.display = 'none' }, 1000);
+};
+
+overlay.style.opacity = 0;
+overlay.style.display = 'none';
 
 gridContainer.addEventListener('click', event => {
     if(event.target !== gridContainer) {
         const card = event.target.closest(".card");
         const index = card.getAttribute('data-index');
-        displayModal(index);
+        if(overlay.style.display === "none") {
+            displayModal(index);
+            overlay.style.display = "";
+            displayShow(overlay);
+        }
     }
 });
 
  modalClose.addEventListener('click', () => {
-    overlay.classList.add("hidden");
+    if(overlay.style.display === "") {
+        overlay.style.opacity = 0;
+        displayHide(overlay);
+    }
  });
 
  //// Search Employees jquery ////
@@ -83,4 +107,27 @@ gridContainer.addEventListener('click', event => {
     $(".card").filter(function(){
       $(this).toggle($(this).html().toLowerCase().indexOf(value) > -1)
     });
+  });
+
+  //// Modal arrow toggles ////
+  arrowRight.addEventListener('click', event => {
+    let nextEmployee = currentModal;
+    if(nextEmployee <= employees.length - 2) {
+        nextEmployee += 1
+        displayModal(nextEmployee);
+    } else if(currentModal === 11) {
+        nextEmployee = 0;
+        displayModal(nextEmployee);
+    }
+  });
+
+  arrowLeft.addEventListener('click', event => {
+    let nextEmployee = currentModal;
+    if(nextEmployee >= 1) {
+        nextEmployee += -1
+        displayModal(nextEmployee);
+    } else if(currentModal === 0) {
+        nextEmployee = 11;
+        displayModal(nextEmployee);
+    }
   });

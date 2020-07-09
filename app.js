@@ -4,7 +4,7 @@ const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture,email, location, phone, dob &noinfo &nat=US`
-
+const searchBox = document.getElementById("searchBox");
 let employees = [];
 //////////////////////////
 
@@ -74,3 +74,13 @@ gridContainer.addEventListener('click', event => {
  modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
  });
+
+ //// Search Employees jquery ////
+
+ $("#searchBox").on("keyup", function(){
+    const value = $(this).val().toLowerCase();
+  
+    $(".card").filter(function(){
+      $(this).toggle($(this).html().toLowerCase().indexOf(value) > -1)
+    });
+  });

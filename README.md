@@ -1,5 +1,5 @@
 # Teachdegree-project 8
-> A browser based Employee Directory using an API to fetch employee data throughtout the page dynamicly. ALso features a clickable modal which shows even more data. A seach box is also present to seach employees by Location, etc.
+> A browser-based Employee Directory using an API to fetch employee data throughout the page dynamically. Also features a clickable modal that shows even more data. A search box is also present to search employees by Location, etc.
 
 ## Table of contents
 * [General info](#general-info)
@@ -9,9 +9,9 @@
 * [Contact](#contact)
 
 ## General info
-This project demonstrates my use of JavaScript to manipulate the DOM which API data. The data is fetched and then desected into easy to read cards which also turn into modals when clicked.\
+This project demonstrates my use of JavaScript to manipulate the DOM which API data. The data is fetched and then dissected into easy to read cards which also turn into modals when clicked.\
 
-You are able to cycle through modals which arrows and also filter out employees with the search box. All data provided randomly by https://randomuser.me/.
+You can cycle through modals which arrows and also filter out employees with the search box. All data provided randomly by https://randomuser.me/.
 
 ## Screenshots
 ![Example screenshot](images/Screenshot1.png)

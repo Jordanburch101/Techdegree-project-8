@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# Teachdegree-project 8
+> A browser based Employee Directory using an API to fetch employee data throughtout the page dynamicly. ALso features a clickable modal which shows even more data. A seach box is also present to seach employees by Location, etc.
 
-You can use the [editor on GitHub](https://github.com/Jordanburch101/Techdegree-project-8/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Contact](#contact)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## General info
+This project demonstrates my use of JavaScript to manipulate the DOM which API data. The data is fetched and then desected into easy to read cards which also turn into modals when clicked.\
 
-### Markdown
+You are able to cycle through modals which arrows and also filter out employees with the search box. All data provided randomly by https://randomuser.me/.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Screenshots
+![Example screenshot](images/Screenshot1.png)
+![Example screenshot](images/Screenshot2.png)
+![Example screenshot](images/Screenshot3.png)
 
-```markdown
-Syntax highlighted code block
+## Technologies
+* JavaScript
+* CSS3
+* HTML5
 
-# Header 1
-## Header 2
-### Header 3
+## Features
+List of features ready and TODOs for future development
+* Use of API to fetch remote Data
+* working Modal which cycles through employees
+* Seach box which can filter users by name, location, email, phone, etc
 
-- Bulleted
-- List
+To-do list:
+* Resign UI/UX to be more appealing
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Jordanburch101/Techdegree-project-8/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Contact
+Created by [@JordanBurch101](https://github.com/Jordanburch101) - feel free to contact me!
